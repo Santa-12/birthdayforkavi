@@ -1,38 +1,80 @@
-.App {
+
+/* Container setup */
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* dark overlay */
+  backdrop-filter: brightness(0.8);
+  /* soften glitter visibility */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Main content wrapper */
+.content {
+  padding-top: 50px;
+  z-index: 1;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Animated title */
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffccff;
+  text-shadow: 0 0 10px #ff66ff;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Rectangle image */
+.birthday-photo {
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  border: 4px solid white;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+/* Bigger Buttons */
+.buttons button,
+.back-button {
+  margin: 12px;
+  padding: 32px 32px;
+  font-size: 1.5rem;
+  border: none;
+  background: #ff66cc;
   color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons button:hover,
+.back-button:hover {
+  background: #ff3399;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Optional video player */
+.video-player {
+  width: 80%;
+  max-width: 700px;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 20px auto;
 }
