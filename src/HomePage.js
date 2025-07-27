@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import birthdayAudio from './assets/samamusic.mp3';
+import birthdayAudio from './assets/birthday.mp3';
 import birthdayPhoto from './assets/kaviya.jpg';
 
 export default function HomePage() {
